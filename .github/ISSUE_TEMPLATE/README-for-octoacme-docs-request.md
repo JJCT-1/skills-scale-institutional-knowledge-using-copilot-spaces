@@ -1,0 +1,51 @@
+---
+name: "Add Content to Project Management Process Docs"
+description: "Request to add new content or updates to an existing program management process document."
+title: "[Process Doc Update]: Add README, project management processes summary, and links to all docs in docs folder"
+labels: ["documentation", "process improvement"]
+body:
+  - type: dropdown
+    id: process_doc
+    attributes:
+      label: "Which process document do you want to update? (If this is a new document, select '<new document>')"
+      description: "Select the program management process document you want to add content to. If this is a new process doc, choose '<new document>'."
+      options:
+        - <new document>
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_summary
+    attributes:
+      label: "Summary of New Content"
+      description: "Briefly describe the new content or update you want to add."
+      placeholder: "E.g., Add README.md with project management summary and doc links."
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Why is this update needed?"
+      description: "Explain the reason for this addition. Is it to address a gap, improve clarity, incorporate a best practice, etc.?"
+      placeholder: "E.g., Easier onboarding, adds navigation, better aligns with documentation standards."
+    validations:
+      required: true
+
+  - type: textarea
+    id: example_content
+    attributes:
+      label: "Suggested Content (optional)"
+      description: "Paste the proposed new text, checklist, diagram, or example content you'd like to add. (Optional)"
+      placeholder: "E.g., Proposed README.md content with links and summary."
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Check all that apply:"
+      options:
+        - label: "Content aligns with existing process docs"
+        - label: "Update improves clarity or closes a documented gap"
+        - label: "Proposed content has been reviewed with stakeholders (if needed)"
+---
